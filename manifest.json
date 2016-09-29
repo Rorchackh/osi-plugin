@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "Test Extension",
+    "version": "0.1",
+    "background": {
+        "persistent": false,
+        "scripts": ["jquery-1.11.3.min.js", "background.js"]
+    },
+    "content_scripts": [{
+        "matches": ["*://*/*"],
+        "js": ["content.js"]
+    }],
+    "browser_action": {
+        "default_title": "OSI Plugin"
+    },
+    "permissions": ["activeTab", "tabs", "input"]
+}
